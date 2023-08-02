@@ -23,6 +23,8 @@
   src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+
+
 /*----START----
 box-sizing: border-box;*/
 html {
@@ -35,8 +37,71 @@ html {
 /*----END----
 box-sizing: border-box;*/
 
-.item {
-  width: 200px;
-  height: 100px;
-  background-color: #0aa72c;
+/*----START----
+стили текста по умолчанию для всей страницы*/
+.body {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #102746;
+}
+/*----END----
+стили текста по умолчанию для всей страницы*/
+
+
+.header {
+  position: fixed;/*прикрепление хедера при скролле*/
+  top: 0;/*позиционирование хедера*/
+  left: 0;/*позиционирование хедера*/
+  width: 100%;/*фиксация на экране по размеру*/
+}
+
+/*----START----
+общий врапер*/
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;/*выравниваем блок по середине*/
+}
+/*----END----
+общий врапер*/
+
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;/*для безопасного переноса элементов при масштабировании*/
+  justify-content: space-between;
+  align-items: self-end;
+  padding-top: 56px;
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-list-item {
+  margin-right: 82px;
+}
+
+.header-list-item:last-child {
+  margin-right: 0;
+}
+
+.header-list-link {
+  color: #FFF;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.header-list-link:hover,.header-list-link:focus,.header-list-link:active {
+  opacity: 0.75;
+}
+
+.intro {
+  height: 100vh;
+  background: url(/assets/img/Hero.jpg) no-repeat center;/* два последних значения важны!!!*/
+  background-size: cover;/* это значение важно!!!*/
 }

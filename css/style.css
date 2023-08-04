@@ -30,7 +30,6 @@ box-sizing: border-box;*/
 html {
   box-sizing: border-box;
 }
-
 *,*::before,*::after {
   box-sizing: inherit;
 }
@@ -50,6 +49,13 @@ body {
 /*----END----
 стили текста по умолчанию для всей страницы*/
 
+/*----START----
+img стили по умолчанию, чтобы картинка не превышала размер своего контейнера и всегда сжималась пропорционально по высоте*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*----END----*/
 
 /*----START----
 общий врапер*/
@@ -175,6 +181,10 @@ body {
 
 /*----BENEFITS----*/
 
+.benefits {
+  margin-bottom: 131px;
+}
+
 .benefits-wrapper {
   position: relative;/* для позиционирования .benefits-title */ 
   max-width: 1262px;
@@ -202,5 +212,41 @@ body {
 }
 
 .benefits-card {
-  grid-column: span 1;/* каждая колонка занимает 1 */
+  grid-column: span 1;/* каждая карточка занимает 1 колонку */
+  margin-bottom: 112px;
 }
+
+.benefits-card-pic {
+  margin-bottom: 37px;
+  max-width: 66px;
+}
+
+.benefits-card-title {
+  margin-bottom: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px
+}
+
+.benefits-card-text {
+  margin-bottom: 39px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; 
+}
+
+.benefits-card-link {
+  display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
+  padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat 95% center;/*через бэкграунд устанавливаем изображение декоративного элемента и сразу выставляем расположение по горизонтали 95%, для последующего свойства ::hover, где его расположение выставим в right */
+  color: #006DFE;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.benefits-card-link:hover,.benefits-card-link:focus,.benefits-card-link:active {
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*теперь при наведении элемент стрелка будет принимать расположение по горизонтали right*/
+}
+

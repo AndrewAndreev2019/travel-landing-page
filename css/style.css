@@ -63,6 +63,11 @@ img {
   max-width: 1060px;
   margin: 0 auto;/*выравниваем блок по середине*/
 }
+
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+}
 /*----END----
 общий врапер*/
 
@@ -113,10 +118,11 @@ img {
 /*----INTRO----*/
 
 .intro {
-  min-height: 100vh;/* min-height (при переполнении содержимое не выйдет за границу блока, 100vh-высота области просмотра) */ 
+  min-height: 100vh;/* min-height (при переполнении содержимое не выйдет за границу блока, 100vh-высота области просмотра) */
   background: url(/assets/img/Hero.jpg) no-repeat center;/* два последних значения важны!!!*/
   background-size: cover;/* это значение важно!!!*/
   padding-top: 263px;/*геометрия задается паддингами от содержимого блока */
+  padding-bottom: 232px;/*отступ вниз необходим чтобы при переполнении блока, он оне перекрылся  блоком .benefits-title, значение которого position: absolute;*/
 }
 
 .intro-title {
@@ -138,13 +144,13 @@ img {
   line-height: 24px;
 }
 
-.search-form-input {
+.intro-search-form-input {
   display: flex;
   flex-wrap: wrap;
   border: 0;
 }
 
-.search-form-field {
+.intro-search-form-field {
   width: 297px;
   background: url(../assets/img/svg/circle.svg) transparent no-repeat left top;/* background  в виде .svg картинки с е
   transparent фоном */
@@ -160,20 +166,20 @@ img {
   color: #ffffff;
 }
 
-.search-form-field::placeholder {
+.intro-search-form-field::placeholder {
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
 }
 
-.search-form-submit {
+.intro-search-form-submit {
   padding: 15px 39px;/*геометрия задается паддингами от содержимого блока */
   color: #ffffff;
   background: #1B7DFF;
   border: none;
 }
 
-.search-form-submit:hover,.search-form-submit:focus,.search-form-submit:active {
+.intro-search-form-submit:hover,.intro-search-form-submit:focus,.intro-search-form-submit:active {
   background: #114e9e;
   transition: 400ms;
 }
@@ -185,6 +191,7 @@ img {
   margin-bottom: 131px;
 }
 
+/*здесь используется свойство position: relative;*/
 .benefits-wrapper {
   position: relative;/* для позиционирования .benefits-title */ 
   max-width: 1262px;
@@ -193,6 +200,7 @@ img {
   box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
 }
 
+/*здесь используется свойство position: absolute;*/
 .benefits-title {
   position: absolute;/* выделение блока из общего потока */
   transform: translateY(-100%);/* сдвигаем блок по вертикали на всю его высоту вверх */
@@ -204,13 +212,15 @@ img {
   padding: 93px 100px 88px 100px;/*геометрия задается паддингами от содержимого блока */
 }
 
+/*здесь используется свойство display: grid;*/
 .benefits-cards {
   display: grid;/* блок пишем на гридах */
   grid-template-columns: repeat(3, 1fr);/* создаем 3 колонки по одному fr */
-  column-gap: 55px;
+  column-gap: 55px;/* расстояние между колонками*/
   padding: 0 100px;
 }
 
+/*здесь используется свойство display: grid;*/
 .benefits-card {
   grid-column: span 1;/* каждая карточка занимает 1 колонку */
   margin-bottom: 112px;
@@ -218,7 +228,7 @@ img {
 
 .benefits-card-pic {
   margin-bottom: 37px;
-  max-width: 66px;
+  height: 66px;
 }
 
 .benefits-card-title {
@@ -235,6 +245,7 @@ img {
   line-height: 24px; 
 }
 
+/*здесь используется свойство display: inline-block;*/
 .benefits-card-link {
   display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
   padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
@@ -250,3 +261,122 @@ img {
   background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*теперь при наведении элемент стрелка будет принимать расположение по горизонтали right*/
 }
 
+
+/*----PLACES----*/
+
+.places {
+  margin-bottom: 131px;
+}
+/*здесь используется свойство display: flex;*/
+.places-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;  margin-bottom: 36px;/*задаем расстояние до следующего элемента*/
+}
+
+/*здесь используется свойство position: relative;*/
+.places-title {
+  position: relative;/*задаем позиционирование для декоративного элемента-потомка (::after)*/
+  padding-bottom: 10px;/*задаем отступ включая в него высоту элемента-потомка (::after)*/
+  margin-right: 15px;/*чтобы элементы не соприкасались при масштабировании, задаем отступ*/
+  font-size: 35px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/*здесь используется свойство position: absolute;*/
+.places-title::after {
+  position: absolute;/*задаем позиционирование потомку*/
+  display: block;
+  content: '';/*это свойство обязательно для отображения декоративного элемента*/
+  width: 253px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #006DFE;
+}
+
+.places-caption-link {
+  display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
+  padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*через бэкграунд устанавливаем изображение декоративного элемента*/
+  color: #006DFE;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.places-caption-link:hover,.places-caption-link:focus,.places-caption-link:active {
+  opacity: 0.65;/*устанавливаем прозрачность элемента при наведении*/
+}
+
+/*здесь используется свойство display: grid; где необходимо разместить 5 карточек на 2х строках, в 1й-2 и во 2й-3 шт.. То есть 1я строка 2*3fr, а 2я строка 3*2fr.*/
+.places-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);/*создаем 6ти колоночную сетку*/
+  grid-gap: 10px;/*расстояние между элементами*/
+}
+
+.places-card-size-lg {
+  grid-column: span 3;/*элемент занимает 3 ячейки в сетке*/
+}
+
+.places-card-size-sm {
+  grid-column: span 2;/*элемент занимает 2 ячейки в сетке*/
+}
+
+/*здесь используется свойство position: relative; создаем оверлей в виде псевдоэлемента ::after с прозрачным фоном*/
+.places-card {
+  position: relative;
+  overflow: hidden;/*чтобы при наведении на элемент .places-card:hover при масштабировании transform: scale(1.05); содержимое не выходило за границы элемента*/
+}
+
+/*здесь используется свойство position: absolute; относительно .places-card*/
+.places-card::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;/*устанавливаем элемент средним слоем*/
+  display: block;/*обязательное свойство*/
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.40);
+}
+
+/*для того, чтобы при наведении увеличенное изображение не выходило за рамки картинки, обращаемся к классу .places-card-pic*/
+.places-card:hover .places-card-pic{
+  transform: scale(1.05);
+  transition: 150ms;
+}
+
+/*здесь используется свойство position: absolute; относительно .places-card*/
+.places-card-title {
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;/*устанавливаем элемент верхним слоем*/
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.places-card-pic {
+  width: 100%;/*растягиваем изображение на всю ширину элемента*/
+  height: 100%;/*растягиваем изображение на всю высоту элемента*/
+  object-fit: cover;/*при ресайзе изображение центрируется*/
+}
+
+/*здесь используется свойство position: absolute; относительно .places-card*/
+.places-card-link {
+  position: absolute;
+  width: 100%;/*растягиваем ссылку на всё изображение*/
+  height: 100%;/*растягиваем ссылку на всё изображение*/
+  left: 0;/*привязываем положение ссылки к картинке*/
+  top: 0;/*привязываем положение ссылки к картинке*/
+  z-index: 4;/*устанавливаем слой на вкрхнем уровне*/
+}

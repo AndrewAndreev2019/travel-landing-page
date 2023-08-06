@@ -39,6 +39,8 @@ box-sizing: border-box;*/
 /*----START----
 стили текста по умолчанию для всей страницы*/
 body {
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: normal;
@@ -80,6 +82,14 @@ img {
   top: 0;/*позиционирование хедера*/
   left: 0;/*позиционирование хедера*/
   width: 100%;/*фиксация на экране по размеру*/
+  padding-bottom: 20px;
+  transition: 200ms linear;
+  z-index: 99;/*при прокрутке хедэр будет всегда поверх всех элементов*/
+}
+
+/*этот класс применится при вызове скрипта main.js*/
+.header-active {
+  background: #0E1D28;
 }
 
 .header-wrapper {
@@ -527,4 +537,29 @@ img {
 .top-card-button:hover,.top-card-button:focus,.top-card-button:active {
   transition: 300ms;
   opacity: .65;
+}
+
+
+/*----VIDEO----*/
+
+.video {
+  width: 100%;
+}
+
+.video-wrapper {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.video-format {
+  padding-top: 56.25%;
+}
+
+.video-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

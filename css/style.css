@@ -380,3 +380,54 @@ img {
   top: 0;/*привязываем положение ссылки к картинке*/
   z-index: 4;/*устанавливаем слой на вкрхнем уровне*/
 }
+
+
+/*----TOURS----*/
+
+.tours {
+  margin-bottom: 139px;
+}
+
+/*создаем грид-контейнер*/
+.tours-tour-wrap {
+  display: grid;
+  align-items: center;/*выравниваем элементы вертикально по центу*/
+  grid-template-columns: repeat(2, 1fr);/*создаем 2 колонки по 1 фрагменту*/
+  grid-gap: 0 108px;/*по вертикали отступ 0, по горизонтали отступ 108px.*/
+  margin-bottom: 80px;
+}
+
+.tour-info {
+  padding: 25px;
+}
+
+.tour-title {
+  margin-bottom: 85px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px; 
+}
+
+.tour-descr {
+  margin-bottom: 58px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.tour-link {
+  display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
+  padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat 95% center;/*через бэкграунд устанавливаем изображение декоративного элемента*/
+  color: #006DFE;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.tour-link:hover,.tour-link:focus,.tour-link:active {
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*теперь при наведении элемент стрелка будет принимать расположение по горизонтали right*/
+  opacity: .65;
+}

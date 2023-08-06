@@ -431,3 +431,100 @@ img {
   background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*теперь при наведении элемент стрелка будет принимать расположение по горизонтали right*/
   opacity: .65;
 }
+
+
+/*----TOP PLACES----*/
+
+.top-places {
+  margin-bottom: 86px;
+}
+
+.top-places-title {
+  margin-bottom: 54px;
+}
+
+/*создаем грид-контейнер*/
+.top-cards-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/*создаем 3 колонки по 1 фрагменту*/
+  grid-gap: 57px;/*по вертикали и по горизонтали отступ 57px.*/
+}
+
+/*через флексы устанавливаем защиту от переполнения в блоке, благодаря чему сохраняется единый размер у всех карточек, при этом надо выставить марджины у .top-card-button*/
+.top-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/*здесь используется свойство position: relative; все дочерние элементы будут в position: absolute;*/
+.top-card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+/*здесь используется свойство position: absolute; относительно .top-card-pic*/
+.top-card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  padding: 16px 25px;
+  bottom: 3px;/*привязываем блок внизу-слева в родителе*/
+  left: 0;/*привязываем блок внизу-слева в родителе*/
+  width: 100%;/*занимаем всю ширину родителя*/
+  background: rgba(21, 24, 36, 0.60);
+}
+
+.top-card-title {
+  margin: 0 auto 0 0;/*если у родителя установлено свойство display: flex; и justify-content: flex-end;, то можно прижать данный элемент вправо значением auto*/
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.top-card-likes {
+  padding-right: 22px;
+  margin-left: 5px;
+  margin-right: 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: url(../assets/img/svg/like_ico.svg) no-repeat right;
+}
+
+.top-card-comments {
+  padding-right: 23px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: url(../assets/img/svg/comment_ico.svg) no-repeat right;
+}
+
+.top-card-text {
+  margin-bottom: 31px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/*прижимаем марджином кнопку к низу карточки, через значение auto*/
+.top-card-button {
+  width: 118px;
+  padding: 12px 19px;
+  margin: auto 0 0 0;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background: #006DFE;
+  text-decoration: none;
+}
+
+.top-card-button:hover,.top-card-button:focus,.top-card-button:active {
+  transition: 300ms;
+  opacity: .65;
+}

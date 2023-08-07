@@ -3,9 +3,356 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Discover Amazing places in Japan</title>
 </head>
 <body>
-  
+
+  <!--HEADER-->
+  <header class="header">
+    <div class="wrapper">
+      <div class="header-wrapper">
+        <div class="header-logo">
+          <a href="#" class="header-logo-link">
+            <img src="./assets/img/svg/odigo_logo.svg" alt="Discover Amazing places in Japan" class="header-logo-pic">
+          </a>
+        </div>
+        <div class="header-nav">
+          <ul class="header-list">
+            <li class="header-list-item">
+              <a href="#!" class="header-list-link">Articles</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#!" class="header-list-link">Locations</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#!" class="header-list-link">Videos</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#!" class="header-list-link">Sign in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+
+    <!--INTRO-->
+    <section class="intro">
+      <div class="wrapper">
+        <h1 class="intro-title">
+          Discover Amazing places in Japan
+        </h1>
+        <p class="intro-subtitle">
+          Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door.
+        </p>
+        <form action="" class="intro-search-form">
+          <fieldset class="intro-search-form-wrapper">
+            <p class="intro-search-form-input">
+              <input type="text" name="user-like-to-do" class="intro-search-form-field" placeholder="What would you like to do?">
+              <input type="text" name="user-like-to-go" class="intro-search-form-field" placeholder="Where would you like to go?">
+              <button class="intro-search-form-submit">SEARCH</button>
+            </p>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!--BENEFITS-->
+    <section class="benefits">
+      <div class="wrapper-full">
+        <div class="benefits-wrapper">
+          <h2 class="benefits-title">Benefits of Odigo</h2>
+          <div class="benefits-cards">
+            <div class="benefits-card">
+              <div class="benefits-card-pic">
+                <img src="./assets/img/svg/church_icon.svg" alt="Welcome to Odigo!" class="benefits-card-thumb">
+              </div>
+              <h3 class="benefits-card-title">Welcome to Odigo!</h3>
+              <p class="benefits-card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
+              <a href="#" class="benefits-card-link">LEARN MORE</a>
+            </div>
+            <div class="benefits-card">
+              <div class="benefits-card-pic">
+              <img src="./assets/img/svg/person_icon.svg" alt="Your Personal Japan Guide" class="benefits-card-thumb">
+              </div>
+              <h3 class="benefits-card-title">Your Personal Japan Guide</h3>
+              <p class="benefits-card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
+              <a href="#" class="benefits-card-link">LEARN MORE</a>
+            </div>
+            <div class="benefits-card">
+              <div class="benefits-card-pic">
+                <img src="./assets/img/svg//building_icon.svg" alt="Promoting Local Businesses" class="benefits-card-thumb">
+              </div>
+              <h3 class="benefits-card-title">Promoting Local Businesses</h3>
+              <p class="benefits-card-text">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
+              <a href="#" class="benefits-card-link">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--PLACES-->
+    <section class="places">
+      <div class="wrapper-full">
+        <div class="places-caption">
+          <h2 class="places-title">Get inspired for your next trip</h2>
+          <a href="#" class="places-caption-link">VIEW ALL</a>
+        </div>
+        <div class="places-cards">
+          <figure class="places-card places-card-size-lg">
+            <img src="./assets/img/mount-image.jpg" alt="mount" class="places-card-pic">
+            <figcaption class="places-card-title">
+              Mount Fuji
+            </figcaption>
+            <a href="#" class="places-card-link"></a>
+          </figure>
+          <figure class="places-card places-card-size-lg">
+            <img src="./assets/img/kyoto-image.jpg" alt="kyoto" class="places-card-pic">
+            <figcaption class="places-card-title">
+              Kyoto
+            </figcaption>
+            <a href="#" class="places-card-link"></a>
+          </figure>
+          <figure class="places-card places-card-size-sm">
+            <img src="./assets/img/tokyo-image.jpg" alt="tokyo" class="places-card-pic">
+            <figcaption class="places-card-title">
+              Tokyo
+            </figcaption>
+            <a href="#" class="places-card-link"></a>
+          </figure>
+          <figure class="places-card places-card-size-sm">
+            <img src="./assets/img/niigata-image.jpg" alt="niigata" class="places-card-pic">
+            <figcaption class="places-card-title">
+              Niigata
+            </figcaption>
+            <a href="#" class="places-card-link"></a>
+          </figure>
+          <figure class="places-card places-card-size-sm">
+            <img src="./assets/img/sapporo-image.jpg" alt="sapporo" class="places-card-pic">
+            <figcaption class="places-card-title">
+              Sapporo
+            </figcaption>
+            <a href="#" class="places-card-link"></a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!--TOURS-->
+    <div class="tours"><!--не используем тег <section>, т.к. в этом блоке нет заголовка <h>-->
+      <div class="wrapper-full">
+        <div class="tours-tour-wrap"><!--создаем обертку для грид-контейнера-->
+          <div class="tour-pic">
+            <img src="./assets/img/tours1.jpg" alt="Tottori" class="tour-thumb">
+          </div>
+          <div class="tour-info">
+            <h3 class="tour-title">
+              Prefecture in Focus: Tottori
+            </h3>
+            <p class="tour-descr">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door.
+            </p>
+            <a href="#" class="tour-link">VIEW PREFECTURE</a>
+          </div>
+        </div>
+        <div class="tours-tour-wrap"><!--создаем обертку для грид-контейнера-->
+          <div class="tour-info">
+            <h3 class="tour-title">
+              Featured Neighborhood: Kyoto’s Arashiyama
+            </h3>
+            <p class="tour-descr">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door.
+            </p>
+            <a href="#" class="tour-link">VIEW NEIGHBORHOOD</a>
+          </div>
+          <div class="tour-pic">
+            <img src="./assets/img/tours2.jpg" alt="Kyoto’s Arashiyama" class="tour-thumb">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--TOP PLACES-->
+    <section class="top-places">
+      <div class="wrapper-full">
+        <h2 class="top-places-title places-title">Today top places to visit</h2>
+        <div class="top-cards-wrap"><!--создаем обертку для грид-контейнера-->
+          <div class="top-card">
+            <div class="top-card-pic">
+              <img src="./assets/img/top_places_nagoya.jpg" alt="nagoya" class="top-card-thumb">
+              <div class="top-card-stats">
+                <h3 class="top-card-title">NAGOYA</h3>
+                <div class="top-card-likes">
+                  <span class="top-card-likes-value">555</span>
+                </div>
+                <div class="top-card-comments">
+                  <span class="top-card-comments-value">333</span>
+                </div>
+              </div>
+            </div>
+            <p class="top-card-text">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ipsam atque esse debitis? Explicabo dolor voluptates accusantium cumque earum possimus vitae rerum facilis minus recusandae esse provident sapiente ut quia, blanditiis unde officiis laborum. Nostrum, aliquam? Dignissimos ea incidunt aliquam aspernatur ipsam voluptatem libero laudantium, distinctio dolore tempora cum quo!
+            </p>
+            <a href="#" class="top-card-button">SEE MORE</a>
+          </div>
+          <div class="top-card">
+            <div class="top-card-pic">
+              <img src="./assets/img/top_places_niigata.jpg" alt="NIIGATA" class="top-card-thumb">
+              <div class="top-card-stats">
+                <h3 class="top-card-title">NIIGATA</h3>
+                <div class="top-card-likes">
+                  <span class="top-card-likes-value">555</span>
+                </div>
+                <div class="top-card-comments">
+                  <span class="top-card-comments-value">333</span>
+                </div>
+              </div>
+            </div>
+            <p class="top-card-text">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vitae a maxime, eos at voluptas, cupiditate architecto, perspiciatis dolore delectus exercitationem perferendis totam deleniti. Odio cumque exercitationem numquam ut aperiam.
+            </p>
+            <a href="#" class="top-card-button">SEE MORE</a>
+          </div>
+          <div class="top-card">
+            <div class="top-card-pic">
+              <img src="./assets/img/top_places_osaka.jpg" alt="OSAKA" class="top-card-thumb">
+              <div class="top-card-stats">
+                <h3 class="top-card-title">OSAKA</h3>
+                <div class="top-card-likes">
+                  <span class="top-card-likes-value">555</span>
+                </div>
+                <div class="top-card-comments">
+                  <span class="top-card-comments-value">333</span>
+                </div>
+              </div>
+            </div>
+            <p class="top-card-text">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+            </p>
+            <a href="#" class="top-card-button">SEE MORE</a>
+          </div>
+          <div class="top-card">
+            <div class="top-card-pic">
+              <img src="./assets/img/top_places_saitama.jpg" alt="SAITAMA" class="top-card-thumb">
+              <div class="top-card-stats">
+                <h3 class="top-card-title">SAITAMA</h3>
+                <div class="top-card-likes">
+                  <span class="top-card-likes-value">555</span>
+                </div>
+                <div class="top-card-comments">
+                  <span class="top-card-comments-value">333</span>
+                </div>
+              </div>
+            </div>
+            <p class="top-card-text">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+            </p>
+            <a href="#" class="top-card-button">SEE MORE</a>
+          </div>
+          <div class="top-card">
+            <div class="top-card-pic">
+              <img src="./assets/img/top_places_ueno.jpg" alt="UENO" class="top-card-thumb">
+              <div class="top-card-stats">
+                <h3 class="top-card-title">UENO</h3>
+                <div class="top-card-likes">
+                  <span class="top-card-likes-value">555</span>
+                </div>
+                <div class="top-card-comments">
+                  <span class="top-card-comments-value">333</span>
+                </div>
+              </div>
+            </div>
+            <p class="top-card-text">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+            </p>
+            <a href="#" class="top-card-button">SEE MORE</a>
+          </div>
+          <div class="top-card">
+            <div class="top-card-pic">
+              <img src="./assets/img/top_places_shibuya.jpg" alt="SHIBUYA" class="top-card-thumb">
+              <div class="top-card-stats">
+                <h3 class="top-card-title">SHIBUYA</h3>
+                <div class="top-card-likes">
+                  <span class="top-card-likes-value">555</span>
+                </div>
+                <div class="top-card-comments">
+                  <span class="top-card-comments-value">333</span>
+                </div>
+              </div>
+            </div>
+            <p class="top-card-text">
+              Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vel quae veritatis doloribus facere. Aliquid?
+            </p>
+            <a href="#" class="top-card-button">SEE MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--VIDEO-->
+    <div class="video">
+        <div class="video-wrapper">
+          <div class="video-format"><!--КТО ЗНАЕТ, КАК ЭТО РАБОТАЕТ, НО ЭТОТ БЛОК НЕОБХОДИМ, ЧТОБЫ ВИДЕО ПРОПОРЦИОНАЛЬНО МАСШТАБИРОВАЛОСЬ-->
+          </div>
+          <iframe class="video-item" src="https://www.youtube.com/embed/L5_vyBTKxso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen><!--убираем аттрибуты width и height для корректного отображения видео-->
+          </iframe>
+        </div>
+    </div>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-item">
+        <div class="footer-logo">
+          <img src="./assets/img/svg/footer_odigo_logo.svg" alt="odigo logo" class="footer-odigo-logo">
+        </div>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h3 href="#" class="footer-nav-title">Company</h3></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">About</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Team</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Careers</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Privacy Policy</a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h3 href="#" class="footer-nav-title">Locations</h3></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Tokyo</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Kyoto</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Osaka</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Hokkaido</a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h3 href="#" class="footer-nav-title">Social Media</h3></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Facebook</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Twitter</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Instagram</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Youtube</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
 </body>
 </html>

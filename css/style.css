@@ -1,0 +1,612 @@
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+/*----START----
+box-sizing: border-box;*/
+html {
+  box-sizing: border-box;
+}
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+/*----END----
+box-sizing: border-box;*/
+
+/*----START----
+стили текста по умолчанию для всей страницы*/
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #102746;
+}
+/*----END----
+стили текста по умолчанию для всей страницы*/
+
+/*----START----
+img стили по умолчанию, чтобы картинка не превышала размер своего контейнера и всегда сжималась пропорционально по высоте*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*----END----*/
+
+/*----START----
+общий врапер*/
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;/*выравниваем блок по середине*/
+}
+
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+}
+/*----END----
+общий врапер*/
+
+
+
+/*----HEADER----*/
+
+.header {
+  position: fixed;/*прикрепление хедера при скролле*/
+  top: 0;/*позиционирование хедера*/
+  left: 0;/*позиционирование хедера*/
+  width: 100%;/*фиксация на экране по размеру*/
+  padding-bottom: 20px;
+  transition: 200ms linear;
+  z-index: 99;/*при прокрутке хедэр будет всегда поверх всех элементов*/
+}
+
+/*этот класс применится при вызове скрипта main.js*/
+.header-active {
+  background: #0E1D28;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;/*для безопасного переноса элементов при масштабировании*/
+  justify-content: space-between;
+  align-items: self-end;
+  padding-top: 56px;/*геометрия задается паддингами от содержимого блока */
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-list-item {
+  margin-right: 82px;
+}
+
+.header-list-item:last-child {
+  margin-right: 0;
+}
+
+.header-list-link {
+  color: #FFF;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.header-list-link:hover,.header-list-link:focus,.header-list-link:active {
+  opacity: 0.75;
+}
+
+
+/*----INTRO----*/
+
+.intro {
+  min-height: 100vh;/* min-height (при переполнении содержимое не выйдет за границу блока, 100vh-высота области просмотра) */
+  background: url(/assets/img/Hero.jpg) no-repeat center;/* два последних значения важны!!!*/
+  background-size: cover;/* это значение важно!!!*/
+  padding-top: 263px;/*геометрия задается паддингами от содержимого блока */
+  padding-bottom: 232px;/*отступ вниз необходим чтобы при переполнении блока, он оне перекрылся  блоком .benefits-title, значение которого position: absolute;*/
+}
+
+.intro-title {
+  max-width: 619px;
+  flex-shrink: 0;
+  margin-bottom: 22px;
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.intro-subtitle {
+  max-width: 546px;
+  margin-bottom: 59px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.intro-search-form-input {
+  display: flex;
+  flex-wrap: wrap;
+  border: 0;
+}
+
+.intro-search-form-field {
+  width: 297px;
+  background: url(../assets/img/svg/circle.svg) transparent no-repeat left top;/* background  в виде .svg картинки с е
+  transparent фоном */
+  background-size: 20px;/* размер circle.svg оформленного в виде background */
+  border: none;
+  border-bottom: #BFC0C5 3px solid;/* горизонтальная полоса под инпутом */
+  outline: none;/*свойство убирает рамку при активности элемента*/
+  margin-right: 60px;
+  padding-left: 43px;/* расстояние для поля ввода от левого края инпута */
+  padding-bottom: 22px;/* расстояние от border-bottom до input */
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.intro-search-form-field::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.intro-search-form-submit {
+  padding: 15px 39px;/*геометрия задается паддингами от содержимого блока */
+  color: #ffffff;
+  background: #1B7DFF;
+  border: none;
+}
+
+.intro-search-form-submit:hover,.intro-search-form-submit:focus,.intro-search-form-submit:active {
+  background: #114e9e;
+  transition: 400ms;
+}
+
+
+/*----BENEFITS----*/
+
+.benefits {
+  margin-bottom: 131px;
+}
+
+/*здесь используется свойство position: relative;*/
+.benefits-wrapper {
+  position: relative;/* для позиционирования .benefits-title */ 
+  max-width: 1262px;
+  margin: 0 auto;/* выравниваем посередине */
+  background-color: #ffffff;
+  box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
+}
+
+/*здесь используется свойство position: absolute;*/
+.benefits-title {
+  position: absolute;/* выделение блока из общего потока */
+  transform: translateY(-100%);/* сдвигаем блок по вертикали на всю его высоту вверх */
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 93px 100px 88px 100px;/*геометрия задается паддингами от содержимого блока */
+}
+
+/*здесь используется свойство display: grid;*/
+.benefits-cards {
+  display: grid;/* блок пишем на гридах */
+  grid-template-columns: repeat(3, 1fr);/* создаем 3 колонки по одному fr */
+  column-gap: 55px;/* расстояние между колонками*/
+  padding: 0 100px;
+}
+
+/*здесь используется свойство display: grid;*/
+.benefits-card {
+  grid-column: span 1;/* каждая карточка занимает 1 колонку */
+  margin-bottom: 112px;
+}
+
+.benefits-card-pic {
+  margin-bottom: 37px;
+  height: 66px;
+}
+
+.benefits-card-title {
+  margin-bottom: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px
+}
+
+.benefits-card-text {
+  margin-bottom: 39px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; 
+}
+
+/*здесь используется свойство display: inline-block;*/
+.benefits-card-link {
+  display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
+  padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat 95% center;/*через бэкграунд устанавливаем изображение декоративного элемента и сразу выставляем расположение по горизонтали 95%, для последующего свойства ::hover, где его расположение выставим в right */
+  color: #006DFE;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.benefits-card-link:hover,.benefits-card-link:focus,.benefits-card-link:active {
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*теперь при наведении элемент стрелка будет принимать расположение по горизонтали right*/
+}
+
+
+/*----PLACES----*/
+
+.places {
+  margin-bottom: 131px;
+}
+/*здесь используется свойство display: flex;*/
+.places-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;  margin-bottom: 36px;/*задаем расстояние до следующего элемента*/
+}
+
+/*здесь используется свойство position: relative;*/
+.places-title {
+  position: relative;/*задаем позиционирование для декоративного элемента-потомка (::after)*/
+  padding-bottom: 10px;/*задаем отступ включая в него высоту элемента-потомка (::after)*/
+  margin-right: 15px;/*чтобы элементы не соприкасались при масштабировании, задаем отступ*/
+  font-size: 35px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/*здесь используется свойство position: absolute;*/
+.places-title::after {
+  position: absolute;/*задаем позиционирование потомку*/
+  display: block;
+  content: '';/*это свойство обязательно для отображения декоративного элемента*/
+  width: 253px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #006DFE;
+}
+
+.places-caption-link {
+  display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
+  padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*через бэкграунд устанавливаем изображение декоративного элемента*/
+  color: #006DFE;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.places-caption-link:hover,.places-caption-link:focus,.places-caption-link:active {
+  opacity: 0.65;/*устанавливаем прозрачность элемента при наведении*/
+}
+
+/*здесь используется свойство display: grid; где необходимо разместить 5 карточек на 2х строках, в 1й-2 и во 2й-3 шт.. То есть 1я строка 2*3fr, а 2я строка 3*2fr.*/
+.places-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);/*создаем 6ти колоночную сетку*/
+  grid-gap: 10px;/*расстояние между элементами*/
+}
+
+.places-card-size-lg {
+  grid-column: span 3;/*элемент занимает 3 ячейки в сетке*/
+}
+
+.places-card-size-sm {
+  grid-column: span 2;/*элемент занимает 2 ячейки в сетке*/
+}
+
+/*здесь используется свойство position: relative; создаем оверлей в виде псевдоэлемента ::after с прозрачным фоном*/
+.places-card {
+  position: relative;
+  overflow: hidden;/*чтобы при наведении на элемент .places-card:hover при масштабировании transform: scale(1.05); содержимое не выходило за границы элемента*/
+}
+
+/*здесь используется свойство position: absolute; относительно .places-card*/
+.places-card::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;/*устанавливаем элемент средним слоем*/
+  display: block;/*обязательное свойство*/
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.40);
+}
+
+/*для того, чтобы при наведении увеличенное изображение не выходило за рамки картинки, обращаемся к классу .places-card-pic*/
+.places-card:hover .places-card-pic{
+  transform: scale(1.05);
+  transition: 150ms;
+}
+
+/*здесь используется свойство position: absolute; относительно .places-card*/
+.places-card-title {
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;/*устанавливаем элемент верхним слоем*/
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.places-card-pic {
+  width: 100%;/*растягиваем изображение на всю ширину элемента*/
+  height: 100%;/*растягиваем изображение на всю высоту элемента*/
+  object-fit: cover;/*при ресайзе изображение центрируется*/
+}
+
+/*здесь используется свойство position: absolute; относительно .places-card*/
+.places-card-link {
+  position: absolute;
+  width: 100%;/*растягиваем ссылку на всё изображение*/
+  height: 100%;/*растягиваем ссылку на всё изображение*/
+  left: 0;/*привязываем положение ссылки к картинке*/
+  top: 0;/*привязываем положение ссылки к картинке*/
+  z-index: 4;/*устанавливаем слой на вкрхнем уровне*/
+}
+
+
+/*----TOURS----*/
+
+.tours {
+  margin-bottom: 139px;
+}
+
+/*создаем грид-контейнер*/
+.tours-tour-wrap {
+  display: grid;
+  align-items: center;/*выравниваем элементы вертикально по центу*/
+  grid-template-columns: repeat(2, 1fr);/*создаем 2 колонки по 1 фрагменту*/
+  grid-gap: 0 108px;/*по вертикали отступ 0, по горизонтали отступ 108px.*/
+  margin-bottom: 80px;
+}
+
+.tour-info {
+  padding: 25px;
+}
+
+.tour-title {
+  margin-bottom: 85px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px; 
+}
+
+.tour-descr {
+  margin-bottom: 58px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.tour-link {
+  display: inline-block;/*свойство для отображения декоративного элемента внутри ссылки*/
+  padding-right: 59px;/*оставляем место справа от ссылки для декоративного элемента*/
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat 95% center;/*через бэкграунд устанавливаем изображение декоративного элемента*/
+  color: #006DFE;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.tour-link:hover,.tour-link:focus,.tour-link:active {
+  background: url(../assets/img/svg/icon_right_arrow.svg) no-repeat right center;/*теперь при наведении элемент стрелка будет принимать расположение по горизонтали right*/
+  opacity: .65;
+}
+
+
+/*----TOP PLACES----*/
+
+.top-places {
+  margin-bottom: 86px;
+}
+
+.top-places-title {
+  margin-bottom: 54px;
+}
+
+/*создаем грид-контейнер*/
+.top-cards-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/*создаем 3 колонки по 1 фрагменту*/
+  grid-gap: 57px;/*по вертикали и по горизонтали отступ 57px.*/
+}
+
+/*через флексы устанавливаем защиту от переполнения в блоке, благодаря чему сохраняется единый размер у всех карточек, при этом надо выставить марджины у .top-card-button*/
+.top-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/*здесь используется свойство position: relative; все дочерние элементы будут в position: absolute;*/
+.top-card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+/*здесь используется свойство position: absolute; относительно .top-card-pic*/
+.top-card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  padding: 16px 25px;
+  bottom: 3px;/*привязываем блок внизу-слева в родителе*/
+  left: 0;/*привязываем блок внизу-слева в родителе*/
+  width: 100%;/*занимаем всю ширину родителя*/
+  background: rgba(21, 24, 36, 0.60);
+}
+
+.top-card-title {
+  margin: 0 auto 0 0;/*если у родителя установлено свойство display: flex; и justify-content: flex-end;, то можно прижать данный элемент вправо значением auto*/
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.top-card-likes {
+  padding-right: 22px;
+  margin-left: 5px;
+  margin-right: 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: url(../assets/img/svg/like_ico.svg) no-repeat right;
+}
+
+.top-card-comments {
+  padding-right: 23px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: url(../assets/img/svg/comment_ico.svg) no-repeat right;
+}
+
+.top-card-text {
+  margin-bottom: 31px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/*прижимаем марджином кнопку к низу карточки, через значение auto*/
+.top-card-button {
+  width: 118px;
+  padding: 12px 19px;
+  margin: auto 0 0 0;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background: #006DFE;
+  text-decoration: none;
+}
+
+.top-card-button:hover,.top-card-button:focus,.top-card-button:active {
+  transition: 300ms;
+  opacity: .65;
+}
+
+
+/*----VIDEO----*/
+
+.video {
+  width: 100%;
+}
+
+/*внутри этой обертки находятся 2 блока, .video-format формирует соотношение сторон при масштабировании видео, но он перекрывается блоком .video-item, в котором видео контент и отображается*/
+.video-wrapper {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*вычисление паддинга для пропорционального масштабирования блока .video (9/16*100=56,25%) при соотношении сторон видео 16 к 9.*/
+.video-format {
+  padding-top: 56.25%;
+}
+
+/*устанавливаем position: absolute; для перекрытия блока .video-format и отображения видео контента*/
+.video-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*----FOOTER----*/
+
+.footer {
+  background: #0E1D28;
+  padding: 119px 0;
+}
+
+.footer-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 50%;/*задаем ширину блока 50%*/
+}
+
+.footer-nav {
+  width: 50%;/*обязательно задаем ширину, чтобы содержимое раздвинулось на всю область*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-nav-title {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.footer-nav-link {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footer-nav-link:hover,.footer-nav-link:focus,.footer-nav-link:active {
+  transition: 100ms;
+  opacity: .65;
+}

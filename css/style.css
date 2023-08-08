@@ -64,11 +64,13 @@ img {
 .wrapper {
   max-width: 1060px;
   margin: 0 auto;/*выравниваем блок по середине*/
+  padding: 0 15px;
 }
 
 .wrapper-full {
   max-width: 1262px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 /*----END----
 общий врапер*/
@@ -125,11 +127,42 @@ img {
 }
 
 
+/*----СОЗДАЕМ БУРГЕР МЕНЮ----*/
+.header-burger {
+  width: 40px;
+  height: 28px;
+  position: relative;/*необходимо, чтобы позиционировать линии .burger-line*/
+  display: none;
+}
+
+.burger-line {
+  position: absolute;
+  display: block;/*span строчный элемент, поэтому применяем display: block;*/
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.burger-line-first {
+  top: 0;
+}
+
+.burger-line-second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line-third {
+  bottom: 0;
+}
+
+
 /*----INTRO----*/
 
 .intro {
   min-height: 100vh;/* min-height (при переполнении содержимое не выйдет за границу блока, 100vh-высота области просмотра) */
-  background: url(/assets/img/Hero.jpg) no-repeat center;/* два последних значения важны!!!*/
+  background: url(../assets/img/Hero.jpg) no-repeat center;/* два последних значения важны!!!*/
   background-size: cover;/* это значение важно!!!*/
   padding-top: 263px;/*геометрия задается паддингами от содержимого блока */
   padding-bottom: 232px;/*отступ вниз необходим чтобы при переполнении блока, он оне перекрылся  блоком .benefits-title, значение которого position: absolute;*/
@@ -609,4 +642,61 @@ img {
 .footer-nav-link:hover,.footer-nav-link:focus,.footer-nav-link:active {
   transition: 100ms;
   opacity: .65;
+}
+
+
+/*----MEDIA QUERY 768px----*/
+
+@media screen and (max-width: 768px){
+  .header-burger {
+    display: block;
+  }
+  .header-nav {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 75px;
+    background-color: #0E1D28;
+    z-index: 999;
+    position: fixed;/*выравниваем меню относительно всего экрана, при этом меню выходит из основного потока*/
+    transform: translateX(100%);/*свойство устанавливается для сдвига элемента за видимую область экрана*/
+    transition: 200ms all linear;/*создаем плавное перемещение*/
+  }
+  .header-nav-active {
+    transform: translateX(0);/*свойство устанавливается для сдвига элемента в видимую область экрана*/
+  }
+  .header-list-item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .header-list-item:last-child {
+    margin-bottom: 0;
+  }
+  .header-list-link {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .header-burger-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;/*у элемента родителя установлено свойство position: fixed;, это то же, что и position: relative;*/
+    top: 80px;
+    right: 15px;
+    z-index: 11;
+  }
+  .header-burger-close-line {
+    display: block;/*span строчный элемент, поэтому применяем display: block;*/
+    width: 100%;/*задаем ширину для отображения полосок*/
+    height: 2px;/*задаем высоту для отображения полосок*/
+    background-color: #fff;
+    position: absolute;/*у элемента родителя установлено свойство position: fixed;, это то же, что и position: relative;*/
+  }
+  .header-burger-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);/*выставляем полоску посередине и поворачиваем ее на 45 градусов*/
+  }
+  .header-burger-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);/*выставляем полоску посередине и поворачиваем ее на 45 градусов*/
+  }
 }

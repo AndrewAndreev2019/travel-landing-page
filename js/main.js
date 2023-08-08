@@ -9,3 +9,16 @@
     }
   };
 }()); //самовызывающася функция, вызывается при загрузке main.js
+
+//burger handler
+(function () {
+  const burgerItem = document.querySelector('.burger');
+  const menu = document.querySelector('.header-nav');
+  const menuClose = document.querySelector('.header-burger-close')
+  burgerItem.addEventListener('click', () => {
+    menu.classList.add('header-nav-active');//перед header-nav-active точку не ставим
+  });
+  menuClose.addEventListener('click', () => {
+    menu.classList.remove('header-nav-active');//перед header-nav-active точку не ставим
+  });
+}());
